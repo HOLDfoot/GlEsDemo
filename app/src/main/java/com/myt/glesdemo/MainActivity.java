@@ -1,14 +1,29 @@
 package com.myt.glesdemo;
 
+import android.opengl.GLSurfaceView;
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
 public class MainActivity extends AppCompatActivity {
+    private GLSurfaceView mGlSurfaceView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mGlSurfaceView = new MyGLSurfaceView(this);
+        setContentView(mGlSurfaceView);
+        mGlSurfaceView.setRenderer(new MyRender(this));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mGlSurfaceView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mGlSurfaceView.onPause();
     }
 }
