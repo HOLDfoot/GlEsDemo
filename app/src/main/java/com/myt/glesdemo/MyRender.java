@@ -39,14 +39,14 @@ public class MyRender implements GLSurfaceView.Renderer {
     public void onDrawFrame(GL10 gl) {
         //将颜色缓冲区设置为预设的颜色
         GLES30.glClear(GLES30.GL_COLOR_BUFFER_BIT);
-        GLES30.glLineWidth(5);
+        GLES30.glLineWidth(10); // 太大不起效果
         //启用顶点的数组句柄
         GLES30.glEnableVertexAttribArray(0);
         //准备坐标数据
         GLES30.glVertexAttribPointer(0, 3, GLES30.GL_FLOAT, false, 0, vertexBuffer);
-//        GLES30.glDrawArrays(GLES30.GL_POINTS, 0, 3); //绘制三角形的三个顶点
+        GLES30.glDrawArrays(GLES30.GL_POINTS, 0, 3); //绘制三角形的三个顶点
 //        GLES30.glDrawArrays(GLES30.GL_LINE_LOOP, 0, 3); //绘制三角形的三条边
-        GLES30.glDrawArrays(GLES30.GL_TRIANGLES, 0, 3); //绘制三角形的内部
+//        GLES30.glDrawArrays(GLES30.GL_TRIANGLES, 0, 3); //绘制三角形的内部
         //禁止顶点数组句柄
         GLES30.glDisableVertexAttribArray(0);
     }

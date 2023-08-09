@@ -1,0 +1,4 @@
+#Wed Aug 09 17:44:38 CST 2023
+base.0=C\:\\Users\\Administrator\\AndroidStudioProjects\\research\\demo\\GlEsDemo\\exmOpenGL\\build\\intermediates\\dex\\debug\\out\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
