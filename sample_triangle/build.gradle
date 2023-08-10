@@ -6,7 +6,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.yuhb.sample.cube"
+        applicationId "com.yuhb.sample.triangle"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

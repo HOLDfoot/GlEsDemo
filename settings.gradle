@@ -1,3 +1,4 @@
 include ':app'
 include ':exmOpenGL'
 include ':sample_cube'
+include ':sample_triangle'
